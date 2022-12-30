@@ -57,7 +57,6 @@ bypass_report = pd.read_csv('Bypass_filter.csv')
 bypass_report = bypass_report.drop(["Unnamed: 2"], axis=1)
 bypass_report = bypass_report.fillna("N")
 bypass_report.to_excel('Bypass_Report.xlsx', index=False)  # report for bypass status
-# bypass_report
 df1 = pd.read_excel('setpass_report.xlsx')
 df2 = pd.read_excel('Bypass_Report.xlsx')
 report_setpass_bypass = pd.merge(df2, df1, how='left')
