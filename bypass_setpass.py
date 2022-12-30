@@ -61,8 +61,6 @@ bypass_report.to_excel('Bypass_Report.xlsx', index=False)  # report for bypass s
 df1 = pd.read_excel('setpass_report.xlsx')
 df2 = pd.read_excel('Bypass_Report.xlsx')
 report_setpass_bypass = pd.merge(df2, df1, how='left')
-# report_setpass_bypass1 = report_setpass_bypass.drop(["Unnamed: 0"], axis = 1)
-# report_setpass_bypass1.to_excel('AminiAQ_coverage.xlsx',index = False)# final report
 report_setpass_bypass.to_excel('AminiAQ_coverage.xlsx', index=False)  # final report
 final = pd.read_excel('AminiAQ_coverage.xlsx')
 print(final)
